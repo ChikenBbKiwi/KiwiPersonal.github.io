@@ -1,0 +1,123 @@
+body {
+    background-color: purple;
+    font-family: 'DS-Digital', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@font-face{
+    font-family: myFont;
+    src:url(fontie.ttf);
+}
+
+#clock {
+    font-family: 'myFont', sans-serif; /* You can change the font family here */
+    font-size: 75px;                  /* You can change the font size here */
+    font-weight: bold;                /* You can change the font weight here */
+    color: #ffffff;                   /* You can change the color here */
+}
+
+
+#days-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#dates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.date {
+    display: inline;
+    margin: 0 5px;
+    width: 70px;
+    text-align: center;
+    color: white;
+}
+
+.crossed {
+    color: red;
+    text-decoration: line-through;
+}
+
+.date-today {
+    color: green;
+    font-weight: bold;
+}
+
+.gold-date {
+    color: gold;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pink-box-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pink-box {
+    background-color: pink;
+    color: rgb(9, 109, 171);
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+#image-link {
+    text-decoration: none;
+}
+
+#image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: background-color 0.5s;
+    display: inline-block; /* Added this line */
+}
+
+#user-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+}
+
+#image-link:hover > #image-container {
+    background-color: rgba(255, 105, 180, 0.5);
+}
+
+#image-link:hover > #image-container > #user-image {
+    opacity: 0.7;
+}
+
+@keyframes bounce {
+    0% { top: 0; left: 0; }
+    25% { top: 100px; left: 100px; }
+    50% { top: 0; left: 200px; }
+    75% { top: -100px; left: 100px; }
+    100% { top: 0; left: 0; }
+}
+
+.bounce {
+    position: relative;
+    color: green;
+    animation: bounce 5s infinite; /* Adjust the duration as needed */
+    animation-timing-function: linear;
+}
